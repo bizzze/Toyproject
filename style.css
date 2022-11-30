@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration-line: none;
+}
+body {
+  background-color: #000229;
+  color: aliceblue;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #030434;
+  box-shadow: 0 2px 2px #030434, 0 1px 0 #030434;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+}
+
+nav {
+  float: right;
+  /* padding-right: 10px; */
+}
+
+.logo {
+  display: inline-block;
+  height: 40px;
+  margin: 10px 30px 10px 80px;
+}
+.logo > img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  scale: 1.5;
+}
+
+.nav-items > li {
+  display: inline-block;
+}
+.nav-items > li > a {
+  line-height: 60px;
+  padding: 0 30px;
+}
+.nav-items > li:hover {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 5px;
+}
+#content-wrap:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+aside {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+
+  width: 200px;
+  /* background-color: #003885; */
+  padding-top: 25px;
+  color: white;
+}
+section {
+  float: right;
+  margin-left: 200px;
+}
+
+/* 아마 이것은 나중에 footer를 추가할 때 효과를 발휘할 것 */
+#wrap {
+  margin-top: 60px;
+}
+aside > h1 {
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+aside > ul > li {
+  padding: 20px 10px;
+}
+aside > ul > li > a {
+  color: azure;
+}
+aside > ul > li:hover {
+  background-color: black;
+}
+article {
+  margin: 6px;
+  padding: 10px 25px 25px 25px;
+  border: 1px solid;
+
+  border-radius: 15px;
+}
+article > h1 {
+  padding: 5px;
+}
+article > p {
+  padding: 5px;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: whitesmoke;
+  line-height: 60px;
+  text-align: center;
+}
