@@ -188,7 +188,7 @@ footer {
 /*이것보다도 작아진다면 ~ 결국은 cascading언어다. 마지막이 해당이 되면 그것이
 도출되는 것.*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   header {
     height: 60px;
   }
