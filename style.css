@@ -52,7 +52,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 28px, 15px;
+  padding: 28px 15px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -117,6 +117,7 @@ section {
 
 /* 아마 이것은 나중에 footer를 추가할 때 효과를 발휘할 것 */
 #wrap {
+  width: 100%;
   margin-top: 60px;
 }
 aside > h1 {
@@ -163,37 +164,7 @@ footer {
 }
 
 /* Media Query <Non - Mobile - First Method > */
-/* 1~480px까지 --> for mobile */
-@media screen and (max-width: 480px) {
-  header {
-    height: 60px;
-  }
-  .nav-items {
-    display: none;
-  }
-  .navicon {
-    display: block;
-  }
-  aside {
-    top: 60px;
-  }
-  #wrap {
-    margin-top: 60px;
-  }
-  .navicon:checked ~ .nav-items {
-    display: block;
-    width: 100%;
-    background-color: black;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
-  }
-  .nav-items > li {
-    display: block;
-  }
-  .nav-items > li > a {
-    line-height: 50px;
-  }
-}
-/* 481 ~ 800px까지 -> for tablet  */
+/* 그럼 우선 여기까지 즉, 800 이상까지는 default로 desktop설정을 따라가야겠지 */
 @media screen and (max-width: 800px) {
   header {
     height: 120px;
@@ -211,6 +182,44 @@ footer {
   .logo {
     margin: 10px 0px 10px 10px;
     scale: 0.9;
+  }
+}
+
+/*이것보다도 작아진다면 ~ 결국은 cascading언어다. 마지막이 해당이 되면 그것이
+도출되는 것.*/
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 60px;
+  }
+  .nav-items {
+    display: none;
+  }
+  .navicon {
+    display: block;
+  }
+  aside {
+    top: 60px;
+  }
+  #wrap {
+    margin-top: 60px;
+  }
+
+  .nav-toggle:checked ~ .nav-items {
+    display: block;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+  }
+  .nav-items > li {
+    display: block;
+  }
+  .nav-items > li > a {
+    line-height: 50px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+  .nav-items > li > a:hover {
+    color: yellow;
   }
 }
 /* 801 이상부터 all -> for desktop and wide screen  */
